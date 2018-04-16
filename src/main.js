@@ -9,7 +9,10 @@ $(document).ready(function() {
     var entry = new Entry(title, body);
     entry.wordCount();
     entry.letterCount();
-    console.log(entry.wordCount());
-    console.log(entry.letterCount());
+    entry.getTeaser();
+    $(".wordCount").text(entry.wordCount());
+    $("p").show();
+    $("#output").text(entry.letterCount());
+    $(".entryOutput").text(entry.getTeaser());
   });
 });
